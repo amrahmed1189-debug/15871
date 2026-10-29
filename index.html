@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مسابقة موسم نهاية العام 2026 | الماجد للعود</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brown: #482719;
+  --gold: #c9a45c;
+  --cream: #fffaf0;
+  --dark: #24160f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Cairo', Tahoma, sans-serif;
+  background: #eee8df;
+  color: var(--dark);
+  padding: 24px 12px;
+}
+.poster {
+  max-width: 900px;
+  margin: auto;
+  background: var(--cream);
+  border: 5px solid var(--gold);
+  outline: 2px solid var(--brown);
+  outline-offset: -12px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px #0002;
+}
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 36px 25px 32px;
+  color: white;
+  background:
+    radial-gradient(ellipse at top, #82552d 0%, transparent 65%),
+    linear-gradient(135deg, #25140d, #56321e 55%, #21130d);
+}
+.logo {
+  display: inline-block;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 7px 22px;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 17px;
+}
+.subtitle {
+  font-size: 16px;
+  color: #f5dfb0;
+  font-weight: 700;
+}
+h1 {
+  font-size: clamp(28px, 5vw, 43px);
+  line-height: 1.6;
+  margin: 8px 0;
+  font-weight: 900;
+}
+h1 span { color: #edcc82; }
+.hero p {
+  margin: 8px auto 0;
+  max-width: 650px;
+  line-height: 2;
+  font-size: 15px;
+}
+.ribbon {
+  display: inline-block;
+  background: var(--gold);
+  color: #2d1b10;
+  padding: 8px 28px;
+  border-radius: 3px;
+  font-weight: 900;
+  margin-top: 22px;
+}
+.content { padding: 25px 30px 30px; }
+.section-title {
+  text-align: center;
+  color: var(--brown);
+  font-size: 23px;
+  font-weight: 900;
+  margin: 0 0 17px;
+}
+.duration {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.date-card {
+  flex: 1 1 190px;
+  text-align: center;
+  padding: 15px 10px;
+  border: 1px solid #dfcda7;
+  border-radius: 10px;
+  background: #fff;
+}
+.date-card small {
+  display: block;
+  color: #816343;
+  font-weight: 700;
+}
+.date-card strong {
+  display: block;
+  font-size: 25px;
+  color: var(--brown);
+}
+.days {
+  text-align: center;
+  background: #f0e4ca;
+  border: 1px solid var(--gold);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 26px;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--brown);
+}
+.days span { color: #9b6d24; }
+.countdown {
+  text-align: center;
+  background: #352016;
+  color: white;
+  border-radius: 10px;
+  padding: 17px 12px;
+  margin-bottom: 27px;
+}
+.countdown h3 {
+  color: #edcc82;
+  margin: 0 0 10px;
+}
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  direction: rtl;
+}
+.unit {
+  min-width: 65px;
+  padding: 8px;
+  background: #513523;
+  border: 1px solid #97764a;
+  border-radius: 7px;
+}
+.unit b { display: block; font-size: 27px; }
+.unit small { color: #f1d9aa; font-size: 12px; }
+.rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+.rule {
+  background: white;
+  border-right: 4px solid var(--gold);
+  border-radius: 7px;
+  padding: 13px 15px;
+  line-height: 1.9;
+  box-shadow: 0 2px 8px #00000009;
+}
+.rule b { color: var(--brown); }
+.num {
+  display: inline-flex;
+  width: 27px;
+  height: 27px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--brown);
+  color: #fff;
+  margin-left: 7px;
+  font-size: 13px;
+}
+.prize {
+  margin-top: 22px;
+  padding: 18px;
+  text-align: center;
+  background: linear-gradient(120deg,#f5e8c9,#fffaf0,#f0dfb8);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+}
+.prize strong {
+  display: block;
+  font-size: 23px;
+  color: var(--brown);
+}
+.prize p { margin: 5px 0 0; }
+.closing {
+  text-align: center;
+  margin-top: 24px;
+  line-height: 2;
+  font-weight: 700;
+}
+.closing strong { color: #8c642b; }
+.footer {
+  text-align: center;
+  background: var(--brown);
+  color: #f2d9a3;
+  padding: 13px;
+  font-size: 13px;
+}
+@media(max-width:600px) {
+  .content { padding: 20px 18px; }
+  .rules { grid-template-columns: 1fr; }
+  .timer { gap: 6px; }
+  .unit { min-width: 57px; padding: 7px 4px; }
+  .unit b { font-size: 22px; }
+  .hero { padding: 30px 18px; }
+}
+@media print {
+  body { padding: 0; background: white; }
+  .poster { box-shadow: none; max-width: 100%; }
+  .countdown { display: none; }
+  @page { size: A4; margin: 8mm; }
+}
+</style>
+</head>
+<body>
+
+<main class="poster">
+
+  <header class="hero">
+    <div class="logo">الماجد للعود</div>
+    <div class="subtitle">فريق المبيعات | موسم نهاية العام</div>
+    <h1>مسابقة <span>موسم نهاية العام</span><br>2026</h1>
+    <p>
+      منافسة استثنائية، وطموح بلا حدود!
+      معًا نحو تحقيق المستهدفات البيعية وصناعة نتائج متميزة.
+    </p>
+    <div class="ribbon">انطلق نحو الفوز والتميز</div>
+  </header>
+
+  <section class="content">
+
+    <h2 class="section-title">📅 فترة المسابقة</h2>
+
+    <div class="duration">
+      <div class="date-card">
+        <small>تاريخ البداية</small>
+        <strong>29 أكتوبر</strong>
+        <small>الخميس | 2026</small>
+      </div>
+      <div class="date-card">
+        <small>تاريخ النهاية</small>
+        <strong>31 أكتوبر</strong>
+        <small>السبت | 2026</small>
+      </div>
+    </div>
+
+    <div class="days">
+      مدة المسابقة الإجمالية:
+      <span>3 أيام</span>
+      <div style="font-size:13px;font-weight:600">
+        من 29/10/2026م حتى 31/10/2026م شاملًا يومي البداية والنهاية
+      </div>
+    </div>
+
+    <div class="countdown">
+      <h3 id="timerTitle">الوقت المتبقي حتى نهاية المسابقة</h3>
+      <div class="timer">
+        <div class="unit"><b id="days">00</b><small>يوم</small></div>
+        <div class="unit"><b id="hours">00</b><small>ساعة</small></div>
+        <div class="unit"><b id="minutes">00</b><small>دقيقة</small></div>
+        <div class="unit"><b id="seconds">00</b><small>ثانية</small></div>
+      </div>
+    </div>
+
+    <h2 class="section-title">🏆 آلية المسابقة</h2>
+
+    <div class="rules">
+      <div class="rule">
+        <span class="num">1</span>
+        <b>تحقيق المستهدف</b><br>
+        تحقيق المستهدف الإجمالي للفرع خلال فترة المسابقة.
+      </div>
+
+      <div class="rule">
+        <span class="num">2</span>
+        <b>اعتماد النتائج</b><br>
+        يتم الإعلان عن الفائزين بعد انتهاء المسابقة واعتماد النتائج النهائية.
+      </div>
+
+      <div class="rule">
+        <span class="num">3</span>
+        <b>جوائز مميزة</b><br>
+        رصد جوائز قيمة ومميزة للفائزين تقديرًا لجهودهم وتحقيقهم للنتائج.
+      </div>
+
+      <div class="rule">
+        <span class="num">4</span>
+        <b>احتساب الأداء</b><br>
+        يتم احتساب النتائج بناءً على المستهدفات اليومية المرسلة للفروع والمرفوعة على النظام خلال فترة المسابقة.
+      </div>
+    </div>
+
+    <div class="prize">
+      <strong>🎁 حقق المستهدف واربح!</strong>
+      <p>فرصتك لإثبات التميز والمنافسة على الجوائز.</p>
+    </div>
+
+    <div class="closing">
+      نتطلع إلى منافسة متميزة تعكس جهودكم وتفانيكم في تحقيق المستهدفات البيعية،<br>
+      ونتمنى للجميع التوفيق والنجاح.
+      <br>
+      <strong>والله ولي التوفيق</strong>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    الماجد للعود | معًا نحو أداء أفضل ونتائج استثنائية
+  </footer>
+
+</main>
+
+<script>
+const endDate = new Date(2026, 9, 31, 23, 59, 59);
+
+function updateCountdown() {
+  const now = new Date();
+  let remaining = endDate - now;
+
+  if (remaining <= 0) {
+    document.getElementById('timerTitle').textContent =
+      'انتهت الفترة المحددة للمسابقة';
+    ['days','hours','minutes','seconds'].forEach(id => {
+      document.getElementById(id).textContent = '00';
+    });
+    return;
+  }
+
+  const d = Math.floor(remaining / 86400000);
+  remaining %= 86400000;
+  const h = Math.floor(remaining / 3600000);
+  remaining %= 3600000;
+  const m = Math.floor(remaining / 60000);
+  const s = Math.floor((remaining % 60000) / 1000);
+
+  document.getElementById('days').textContent = String(d).padStart(2,'0');
+  document.getElementById('hours').textContent = String(h).padStart(2,'0');
+  document.getElementById('minutes').textContent = String(m).padStart(2,'0');
+  document.getElementById('seconds').textContent = String(s).padStart(2,'0');
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
